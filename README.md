@@ -1,4 +1,6 @@
 # Accessible Tabs
+[Preview](https://codepen.io/ellimccale/pen/qBrxJPy)
+
 A tab component built with support for keyboard navigation and screen readers. Tested with VoiceOver on macOS.
 
 Based on an example from W3 found here:
