@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Accessible Tabs</title>
+
+  <!-- Stylesheet -->
+  <link href="stylesheet.css" rel="stylesheet">
+  <link href="tab-component.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="container mx-auto">
+
+    <!-- Tab Component -->
+    <div class="tabs p-4">
+
+      <!-- Tab List -->
+      <div role="tablist">
+        <button id="tab-1" role="tab" aria-controls="tab-panel-1" aria-selected="true">Tab 1</button>
+        <button id="tab-2" role="tab" aria-controls="tab-panel-2" aria-selected="false" tabindex="-1">Tab 2</button>
+        <button id="tab-3" role="tab" aria-controls="tab-panel-3" aria-selected="false" tabindex="-1">Tab 3</button>
+      </div>
+      <!-- / Tab List -->
+
+      <!-- Tab Panels -->
+      <section id="tab-panel-1" class="mt-3" role="tabpanel" aria-labelledby="tab-1" tabindex="0">
+        <p>Cake cookie lemon drops sugar plum sugar plum jujubes. Tart danish candy pastry danish sweet roll macaroon tiramisu donut.</p>
+        <p>Fruitcake danish dessert powder brownie. Liquorice tiramisu bear claw cupcake tootsie roll. Brownie powder wafer gummies cake halvah. Donut topping cotton candy. Gummies lollipop dessert. Gingerbread powder wafer pastry.</p>
+        <p>Macaroon marshmallow cheesecake brownie bear claw topping sugar plum candy canes. Cupcake jujubes marshmallow. Tart marzipan dessert muffin gummi bears cake marzipan. Jelly beans halvah biscuit ice cream. Caramels wafer candy canes ice cream candy pie lollipop oat cake. Sugar plum macaroon tart caramels gummies pastry.</p>
+      </section>
+      <section id="tab-panel-2" class="mt-3" role="tabpanel" aria-labelledby="tab-2" tabindex="0" hidden>
+        <p>Cupcake jelly sesame snaps. Chocolate cake biscuit croissant bear claw candy. Pie wafer gummi bears cotton candy caramels candy canes liquorice gummies jujubes.</p>
+        <p>Bonbon jelly-o halvah tootsie roll. Macaroon caramels pastry candy canes powder. Tootsie roll fruitcake oat cake apple pie chupa chups carrot cake. Sweet roll chocolate bar jelly beans biscuit. Lemon drops cookie bear claw. Jujubes sesame snaps apple pie cupcake macaroon marzipan.</p>
+        <p>Ice cream macaroon sweet chocolate cake croissant. Toffee cookie powder. Sugar plum croissant jujubes marzipan sesame snaps brownie croissant. Cupcake sugar plum cake. Gingerbread gummies macaroon cake. Wafer marzipan cheesecake wafer. Gingerbread icing pie soufflé lemon drops cookie. Marshmallow caramels jujubes brownie gummies chocolate cake.</p>
+      </section>
+      <section id="tab-panel-3" class="mt-3" role="tabpanel" aria-labelledby="tab-3" tabindex="0" hidden>
+        <p>Brownie candy canes bear claw tootsie roll. Oat cake oat cake chocolate bar cheesecake marzipan.</p>
+        <p>Pie halvah chocolate candy. Tootsie roll jelly-o sugar plum sweet roll. Chupa chups muffin chocolate cake candy canes halvah. Sweet roll ice cream donut chupa chups brownie jujubes jujubes croissant. Cookie biscuit cheesecake cupcake dessert candy.</p>
+        <p>Marzipan bear claw topping chocolate. Gummies sesame snaps marzipan candy toffee caramels marshmallow chocolate bar. Cheesecake muffin topping croissant lemon drops caramels brownie. Croissant cookie gingerbread jelly-o oat cake oat cake. Bonbon jelly pudding. Caramels croissant dragée chocolate cake.</p>
+      </section>
+      <!-- / Tab Panels -->
+
+    </div>
+    <!-- / Tab Component -->
+
+  </div>
+
+  <!-- Script -->
+  <script src="tab-component.js"></script>
+
+</body>
+</html>

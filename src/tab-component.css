@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Component: Tabs
+   ========================================================================== */
+
+.tabs {
+  background-color: hsl(var(--white));
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgb(0, 0, 0, 10%),
+    0 1px 2px -1px rgb(0, 0, 0, 10%);
+  max-width: 100rem;
+}
+
+/* Tab List
+   ========================================================================== */
+
+/**
+ * 1. Let's use flex to add new tabs without the need to fuss over
+ *    calculating widths
+ */
+
+.tabs [role="tablist"] {
+  display: flex; /* 1 */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Tab Items
+   ========================================================================== */
+
+/**
+ * 1. All tabs should take an equal amount of available space
+ */
+
+.tabs [role="tab"] {
+  --button-background-color: transparent;
+  --button-border-width: 0;
+  --button-border-style: solid;
+  --button-border-color: transparent;
+  --button-border: var(--button-border-width)
+    var(--button-border-style)
+    var(--button-border-color);
+  --button-border-radius: 4px;
+  --button-padding: 0 calc(var(--space-multiplier) * 2rem);
+  --button-text-color: hsl(var(--blue-900));
+  --button-text-shadow: none;
+
+  --tab-inner-shadow-color: hsl(var(--gray-500));
+
+  background-color: var(--button-background-color);
+  border: var(--button-border);
+  border-radius: 0;
+  border-top-left-radius: var(--button-border-radius);
+  border-top-right-radius: var(--button-border-radius);
+  color: var(--button-text-color);
+  box-shadow: inset 0 -1px 0 0 var(--tab-inner-shadow-color);
+  cursor: pointer;
+  flex: 1; /* 1 */
+  padding: var(--button-padding);
+  text-shadow: var(--button-text-shadow);
+}
+
+/* --- Selected Tab --- */
+
+.tabs [role="tab"][aria-selected="true"] {
+  --button-text-color: hsl(var(--light-blue-500));
+  --button-text-decoration: underline;
+
+  box-shadow: inset 1px 0 0 0 var(--tab-inner-shadow-color),
+    inset 0 1px 0 0 var(--tab-inner-shadow-color),
+    inset -1px 0 0 0 var(--tab-inner-shadow-color);
+  color: var(--button-text-color);
+  text-decoration: var(--button-text-decoration);
+}
