@@ -974,6 +974,10 @@ button {
   width: 100%;
 }
 
+button:active {
+  transform: translateY(1px);
+}
+
 button:hover,
 button:focus {
   background-color: hsl(var(--light-blue-900));
